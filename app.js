@@ -1,8 +1,11 @@
-const http = require('http')
-const express = require('')
+const express = require('express')
 
-http.createServer((request, response) => {
-    response.end("TEST")
-}).listen( 8081, () => {
-    console.log("Server is running rigth now")
+const app = express()
+
+app.get('/', (request, response) => {
+    response.send("Hello Word!");
+})
+
+app.listen(8081, () => {
+    console.log("Yupiiii!!!")
 })
